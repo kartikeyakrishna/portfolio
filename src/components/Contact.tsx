@@ -18,14 +18,14 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Create mailto link with form data
+    // Create Gmail compose link with form data
     const subject = encodeURIComponent(formData.subject || 'Portfolio Contact');
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     );
-    const mailtoLink = `mailto:kartikeya.chintala@gmail.com?subject=${subject}&body=${body}`;
+    const gmailLink = `https://compose.gmail.com/compose?to=kartikeya.chintala@gmail.com&subject=${subject}&body=${body}`;
     
-    window.location.href = mailtoLink;
+    window.open(gmailLink, '_blank');
     
     // Reset form
     setFormData({
@@ -41,7 +41,7 @@ const Contact = () => {
       icon: <Mail className="text-primary-600" size={24} />,
       title: 'Email',
       value: 'kartikeya.chintala@gmail.com',
-      link: 'mailto:kartikeya.chintala@gmail.com'
+      link: 'https://compose.gmail.com/compose?to=kartikeya.chintala@gmail.com'
     },
     {
       icon: <Phone className="text-green-600" size={24} />,
@@ -73,7 +73,7 @@ const Contact = () => {
     {
       icon: <Mail size={20} />,
       name: 'Email',
-      url: 'mailto:kartikeya.chintala@gmail.com',
+      url: 'https://compose.gmail.com/compose?to=kartikeya.chintala@gmail.com',
       color: 'hover:bg-primary-600'
     }
   ];
@@ -245,14 +245,18 @@ const Contact = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:kartikeya.chintala@gmail.com?subject=Project Discussion"
+                href="https://compose.gmail.com/compose?to=kartikeya.chintala@gmail.com&subject=Project%20Discussion"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 <Mail size={16} className="mr-2" />
                 Start a Project
               </a>
               <a
-                href="mailto:kartikeya.chintala@gmail.com?subject=Job Opportunity"
+                href="https://compose.gmail.com/compose?to=kartikeya.chintala@gmail.com&subject=Job%20Opportunity"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 border-2 border-primary-600 text-primary-600 dark:text-primary-400 hover:bg-primary-600 hover:text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105"
               >
                 Hire Me

@@ -29,7 +29,7 @@ const Footer = () => {
     },
     {
       icon: <Mail size={20} />,
-      href: 'mailto:kartikeya.chintala@gmail.com',
+      href: 'https://compose.gmail.com/compose?to=kartikeya.chintala@gmail.com',
       label: 'Email'
     }
   ];
