@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
 
 const Hero = () => {
@@ -6,13 +6,13 @@ const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   
-  const texts = [
+  const texts = useMemo(() => [
     'Full Stack Developer',
     'AI/ML Enthusiast', 
     'Python Developer',
     'React Developer',
     'Problem Solver'
-  ];
+  ], []);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
