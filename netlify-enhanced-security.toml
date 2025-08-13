@@ -1,0 +1,87 @@
+# Enhanced Netlify Configuration with Maximum Security Headers
+# Rename to netlify.toml to apply enhanced security (optional)
+
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+# Enhanced Security Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Existing security headers (current)
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # Enhanced security headers (additional)
+    Content-Security-Policy = "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; script-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()"
+    
+    # Additional hardening
+    Cross-Origin-Embedder-Policy = "require-corp"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
+
+# Asset caching with security
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    X-Content-Type-Options = "nosniff"
+
+# Image security
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    X-Content-Type-Options = "nosniff"
+
+# Security.txt for responsible disclosure
+[[headers]]
+  for = "/.well-known/security.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=86400"
