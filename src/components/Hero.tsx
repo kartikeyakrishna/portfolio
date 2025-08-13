@@ -83,20 +83,8 @@ const Hero = () => {
             </div>
 
             {/* Description */}
-            <p className="text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 animate-fade-in">
-              <span className="animate-slide-up" style={{animationDelay: '0.1s'}}>Computer Science student at </span>
-              <span className="text-gradient font-semibold animate-slide-up" style={{animationDelay: '0.2s'}}>NIT Trichy</span>
-              <span className="animate-slide-up" style={{animationDelay: '0.3s'}}> with expertise in </span>
-              <span className="text-gradient font-semibold animate-slide-up" style={{animationDelay: '0.4s'}}>Full-Stack Development</span>
-              <span className="animate-slide-up" style={{animationDelay: '0.5s'}}>, </span>
-              <span className="text-gradient font-semibold animate-slide-up" style={{animationDelay: '0.6s'}}>AI/ML</span>
-              <span className="animate-slide-up" style={{animationDelay: '0.7s'}}>, and </span>
-              <span className="text-gradient font-semibold animate-slide-up" style={{animationDelay: '0.8s'}}>Modern Automation Technologies</span>
-              <span className="animate-slide-up" style={{animationDelay: '0.9s'}}>.<br />Passionate about building </span>
-              <span className="text-gradient font-semibold animate-slide-up" style={{animationDelay: '1.0s'}}>Innovative Solutions</span>
-              <span className="animate-slide-up" style={{animationDelay: '1.1s'}}> and delivering </span>
-              <span className="text-gradient font-semibold animate-slide-up" style={{animationDelay: '1.2s'}}>Impactful Projects</span>
-              <span className="animate-slide-up" style={{animationDelay: '1.3s'}}>.</span>
+            <p className="text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              Computer Science student at <span className="text-gradient font-semibold animate-slide-up">NIT Trichy</span> with expertise in <span className="text-gradient font-semibold animate-slide-up">Full-Stack Development</span>, <span className="text-gradient font-semibold animate-slide-up">AI/ML</span>, and <span className="text-gradient font-semibold animate-slide-up">Modern Automation Technologies</span>.<br />Passionate about building <span className="text-gradient font-semibold animate-slide-up">Innovative Solutions</span> and delivering <span className="text-gradient font-semibold animate-slide-up">Impactful Projects</span>.
             </p>
 
             {/* Social Links */}
