@@ -1,11 +1,46 @@
-# React + TypeScript + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React, TypeScript, and Vite. Features a clean dark theme with smooth animations and interactive components.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎨 Modern dark theme with black background and accent colors
+- 📱 Fully responsive design
+- ⚡ Fast and optimized with Vite
+- 🎭 Smooth animations with Framer Motion
+- 🔧 Built with TypeScript for type safety
+- 🎯 Icon-based navigation and UI elements
+
+## Tech Stack
+
+- **Framework:** React 19 with TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Icons:** React Icons (react-icons) and Lucide React
+- **Typography:** Tailwind Typography
+
+## Recent Changes
+
+### Latest Update: Dark Theme Refactor
+- ✅ Removed category-based organization in favor of icon-based UI
+- ✅ Switched to react-icons for consistent iconography
+- ✅ Implemented black dark-mode theme with purple/blue accents
+- ✅ Updated color scheme across all components for better contrast and readability
+
+## Dependencies
+
+### New Dependency: React Icons
+- **Package:** `react-icons@^5.5.0`
+- **Purpose:** Provides a comprehensive set of icons for the user interface
+- **Usage:** Replaces custom icons and category-based navigation with standardized icon components
+
+### Color Scheme Updates
+- **Background:** Deep black (#000000) for main sections
+- **Cards:** Dark gray (#1a1a1a) with subtle borders
+- **Text:** White primary text with gray secondary text
+- **Accents:** Purple and blue gradients for highlights and buttons
+- **Hover Effects:** Smooth transitions with color and scale changes
 
 ## Expanding the ESLint configuration
 
