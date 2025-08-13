@@ -12,7 +12,7 @@ const Projects = () => {
       category: 'Full Stack',
       featured: true,
       liveUrl: '#',
-      githubUrl: '#'
+      githubUrl: 'https://github.com/kartikeyakrishna/Tutorial'
     },
     {
       title: 'ReactForge',
@@ -34,7 +34,7 @@ const Projects = () => {
       category: 'AI/ML',
       featured: false,
       liveUrl: '#',
-      githubUrl: '#'
+      githubUrl: null  // Temporarily hidden due to sensitive information
     }
   ];
 
@@ -100,7 +100,8 @@ const Projects = () => {
                   </div>
                   
                   <div className="flex items-center space-x-2">
-                    {project.liveUrl && (
+                    {/* Temporarily commented out until projects are completed */}
+                    {/* {project.liveUrl && (
                       <a
                         href={project.liveUrl}
                         className="p-2 text-gray-600 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
@@ -108,7 +109,7 @@ const Projects = () => {
                       >
                         <ExternalLink size={18} />
                       </a>
-                    )}
+                    )} */}
                     {project.githubUrl && (
                       <a
                         href={project.githubUrl}
@@ -148,7 +149,8 @@ const Projects = () => {
 
                 {/* Action Buttons */}
                 <div className="flex space-x-3">
-                  {project.liveUrl && (
+                  {/* Temporarily commented out until projects are completed */}
+                  {/* {project.liveUrl && (
                     <a
                       href={project.liveUrl}
                       className="flex items-center px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
@@ -156,14 +158,14 @@ const Projects = () => {
                       <ExternalLink size={14} className="mr-2" />
                       Live Demo
                     </a>
-                  )}
+                  )} */}
                   {project.githubUrl && (
                     <a
                       href={project.githubUrl}
-                      className="flex items-center px-4 py-2 border border-gray-300 dark:border-black text-gray-700 dark:text-white hover:bg-gray-50 dark:hover:bg-black text-sm font-medium rounded-lg transition-colors"
+                      className="flex items-center px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                     >
                       <Github size={14} className="mr-2" />
-                      Code
+                      View Code
                     </a>
                   )}
                 </div>
