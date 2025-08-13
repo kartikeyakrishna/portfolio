@@ -144,7 +144,7 @@ const Experience = () => {
             Want to know more about my professional journey?
           </p>
           <a
-            href="https://compose.gmail.com/compose?to=kartikeya.chintala@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&to=kartikeya.chintala@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"

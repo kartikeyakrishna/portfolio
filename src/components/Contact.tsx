@@ -23,7 +23,7 @@ const Contact = () => {
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     );
-    const gmailLink = `https://compose.gmail.com/compose?to=kartikeya.chintala@gmail.com&subject=${subject}&body=${body}`;
+    const gmailLink = `https://mail.google.com/mail/?view=cm&to=kartikeya.chintala@gmail.com&su=${subject}&body=${body}`;
     
     window.open(gmailLink, '_blank');
     
@@ -41,7 +41,7 @@ const Contact = () => {
       icon: <Mail className="text-primary-600" size={24} />,
       title: 'Email',
       value: 'kartikeya.chintala@gmail.com',
-      link: 'https://compose.gmail.com/compose?to=kartikeya.chintala@gmail.com'
+      link: 'https://mail.google.com/mail/?view=cm&to=kartikeya.chintala@gmail.com'
     },
     {
       icon: <Phone className="text-green-600" size={24} />,
@@ -73,7 +73,7 @@ const Contact = () => {
     {
       icon: <Mail size={20} />,
       name: 'Email',
-      url: 'https://compose.gmail.com/compose?to=kartikeya.chintala@gmail.com',
+      url: 'https://mail.google.com/mail/?view=cm&to=kartikeya.chintala@gmail.com',
       color: 'hover:bg-primary-600'
     }
   ];
@@ -245,7 +245,7 @@ const Contact = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://compose.gmail.com/compose?to=kartikeya.chintala@gmail.com&subject=Project%20Discussion"
+                href="https://mail.google.com/mail/?view=cm&to=kartikeya.chintala@gmail.com&su=Project%20Discussion"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
@@ -254,7 +254,7 @@ const Contact = () => {
                 Start a Project
               </a>
               <a
-                href="https://compose.gmail.com/compose?to=kartikeya.chintala@gmail.com&subject=Job%20Opportunity"
+                href="https://mail.google.com/mail/?view=cm&to=kartikeya.chintala@gmail.com&su=Job%20Opportunity"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 border-2 border-primary-600 text-primary-600 dark:text-primary-400 hover:bg-primary-600 hover:text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105"

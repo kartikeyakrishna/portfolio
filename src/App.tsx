@@ -9,13 +9,16 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
-    const isDark = localStorage.getItem('darkMode') === 'true';
+    const storedMode = localStorage.getItem('darkMode');
+    const isDark = storedMode !== null ? storedMode === 'true' : true; // Default to true if no preference stored
     setDarkMode(isDark);
     if (isDark) {
       document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
     }
   }, []);
 

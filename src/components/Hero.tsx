@@ -55,7 +55,7 @@ const Hero = () => {
                 <img 
                   src="/profile.jpg" 
                   alt="Kartikeya Krishna" 
-                  className="w-full h-full object-cover object-center transition-all duration-300 group-hover:scale-105"
+                  className="w-full h-full object-cover object-right-top transition-all duration-300 group-hover:scale-105"
                 />
               </div>
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-600/10 group-hover:from-blue-500/20 group-hover:to-purple-600/20 transition-all duration-300"></div>
@@ -93,7 +93,7 @@ const Hero = () => {
             {/* Social Links */}
             <div className="flex justify-center lg:justify-start space-x-4">
               <a
-                href="https://compose.gmail.com/compose?to=kartikeya.chintala@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&to=kartikeya.chintala@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 text-gray-700 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 border border-gray-200 dark:border-gray-700"
