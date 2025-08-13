@@ -23,7 +23,7 @@ const Projects = () => {
       category: 'Platform',
       featured: true,
       liveUrl: '#',
-      githubUrl: '#'
+      githubUrl: 'https://github.com/kartikeyakrishna/reactforge'
     },
     {
       title: 'WhatsApp AI Assistant',
