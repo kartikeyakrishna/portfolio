@@ -45,7 +45,7 @@ const Header = ({ darkMode, toggleDarkMode }: HeaderProps) => {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <a
@@ -54,15 +54,15 @@ const Header = ({ darkMode, toggleDarkMode }: HeaderProps) => {
                 e.preventDefault();
                 handleNavClick('#home');
               }}
-              className="text-2xl font-bold text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              className="text-3xl font-bold text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
             >
               KC
             </a>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden md:block flex-1">
+            <div className="flex items-center justify-center space-x-8">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
@@ -71,19 +71,20 @@ const Header = ({ darkMode, toggleDarkMode }: HeaderProps) => {
                     e.preventDefault();
                     handleNavClick(link.href);
                   }}
-                  className="text-gray-700 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="text-gray-700 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 px-4 py-2 rounded-md text-sm font-medium transition-colors relative group"
                 >
                   {link.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-600 dark:bg-primary-400 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Dark Mode Toggle & Mobile Menu Button */}
-          <div className="flex items-center space-x-4">
+          {/* Right Side - Dark Mode Toggle & Mobile Menu Button */}
+          <div className="flex items-center space-x-3">
             <button
               onClick={toggleDarkMode}
-              className="p-2 rounded-lg bg-gray-200 dark:bg-black text-gray-700 dark:text-white hover:bg-gray-300 dark:hover:bg-black transition-colors"
+              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               aria-label="Toggle dark mode"
             >
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
