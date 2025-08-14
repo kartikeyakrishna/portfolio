@@ -6,7 +6,7 @@ const Experience = () => {
       title: 'Python and AI Developer Intern',
       company: 'Bythebot',
       location: 'Malaga, Spain',
-      duration: 'JUL 2025 – Present',
+      duration: 'JUL 2025 – Present, Remote',
       type: 'Current Role',
       description: [
         'Developed and deployed AI automation tools using Python, Flask, OpenAI, and third-party APIs, eliminating manual workflows across client operations',
